@@ -1,0 +1,371 @@
+/* ---------- Colors (from the Figma variables) ---------- */
+
+body {
+  --primary: #4c7046;
+  --secondary: #1c3319;
+  --tertiary: #c2dfba;
+  --gray-text: #9a9a9a;
+  --card-gray: #d9d9d9;
+}
+
+/* ---------- Page basics ---------- */
+
+.page {
+  margin: 0;
+  background-color: var(--tertiary);
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 24px;
+}
+
+/* The Figma design is 1280px wide. This keeps the content
+   that wide and centered on bigger screens. */
+.page-width {
+  width: 1280px;
+  margin: 0 auto;
+}
+
+/* ---------- Header ---------- */
+
+/* The star sits in the top left corner of the browser window.
+   The right padding (44px + the star's 72px) matches the space the
+   star takes up, so the logo stays centered on the page. */
+.site-header {
+  height: 166px;
+  padding-right: 116px;
+  background-color: var(--primary);
+}
+
+.nav-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.star-item {
+  margin: 46px 0 0 44px;
+}
+
+/* The star is a button so that it can open the menu */
+.star-button {
+  display: block;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.star-image {
+  display: block;
+  width: 72px;
+  height: auto;
+}
+
+/* A second star, colored with "secondary", that only shows on hover */
+.star-image-hover {
+  display: none;
+  width: 72px;
+  height: auto;
+}
+
+.star-button:hover .star-image {
+  display: none;
+}
+
+.star-button:hover .star-image-hover {
+  display: block;
+}
+
+/* ---------- Pop-up menu ---------- */
+
+/* The browser already puts a popover on top of the page and hides it
+   until the star is clicked. These styles place it in the top left
+   corner so the two stars line up. */
+.menu-panel {
+  box-sizing: border-box;
+  top: -15px;
+  left: -15px;
+  width: 412px;
+  height: 524px;
+  margin: 0;
+  padding: 61px 0 0 59px;
+  border: 0;
+  background-color: rgba(28, 51, 25, 0.87);
+}
+
+.menu-star-button {
+  display: block;
+  margin: 0 0 24px 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+.menu-star-image {
+  display: block;
+  width: 72px;
+  height: auto;
+}
+
+.menu-list {
+  margin: 0 0 0 13px;
+  padding: 0;
+  list-style: none;
+}
+
+.menu-link {
+  display: block;
+  padding: 8px 0;
+  font-family: "Marcellus", serif;
+  font-size: 32px;
+  line-height: 43px;
+  letter-spacing: 0.32px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* "auto" on the left and right pushes the logo to the middle */
+.logo-item {
+  margin: 64px auto 0 auto;
+}
+
+.logo-link {
+  display: flex;
+  gap: 18px;
+}
+
+.logo-pasta {
+  width: 198px;
+  height: auto;
+}
+
+.logo-night {
+  width: 198px;
+  height: auto;
+  transform: rotate(-0.5deg);
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding: 39px 0 34px 0;
+  background-color: var(--secondary);
+}
+
+/* The image stays 1280px wide on every screen. On bigger screens the
+   dark green behind it fills the extra space on the left and right. */
+.hero-image {
+  display: block;
+  width: 1280px;
+  height: 629px;
+  margin: 0 auto;
+  object-fit: cover;
+}
+
+/* ---------- Quote sections (the two reviews) ---------- */
+
+.quote-section {
+  text-align: center;
+}
+
+.green-section {
+  padding: 70px 0 72px 0;
+  background-color: var(--primary);
+}
+
+.light-section {
+  padding: 133px 0 155px 0;
+  background-color: var(--tertiary);
+}
+
+.intro-text {
+  margin: 0 0 108px 0;
+  font-family: "Marcellus", serif;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: var(--tertiary);
+}
+
+.quote-text {
+  margin: 0 0 15px 0;
+  font-family: "Marcellus SC", serif;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0.3px;
+  color: var(--tertiary);
+}
+
+/* The stars start 529px from the left edge, the name sits to their right */
+.review-row {
+  display: flex;
+  align-items: center;
+  padding-left: 529px;
+  text-align: left;
+}
+
+.review-stars {
+  display: block;
+  width: 241px;
+  height: 45px;
+}
+
+.review-name {
+  margin: 0 0 0 206px;
+  font-family: "Marcellus", serif;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: var(--tertiary);
+}
+
+/* Put this class on text that sits on the light green background */
+.dark-text {
+  color: var(--secondary);
+}
+
+/* ---------- Poster ---------- */
+
+/* The poster overlaps two colors. The top 621px is dark green and
+   the rest is light green, so the poster looks like it sits on both. */
+.poster-section {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(var(--primary) 621px, var(--tertiary) 621px);
+}
+
+.poster-image {
+  display: block;
+  width: 570px;
+  height: 881px;
+  object-fit: cover;
+}
+
+/* ---------- Submit a review ---------- */
+
+.review-section {
+  padding: 151px 0 199px 0;
+  background-color: var(--secondary);
+}
+
+.section-heading {
+  margin: 0 0 81px 0;
+  font-family: "Marcellus SC", serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 37px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: var(--tertiary);
+}
+
+.community-heading {
+  margin-bottom: 99px;
+}
+
+.watch-link {
+  color: var(--tertiary);
+  text-decoration: underline;
+}
+
+/* The area stays 227px tall, so the page below does not jump
+   when the box changes size */
+.review-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 227px;
+  margin: 0 0 96px 0;
+}
+
+/* The box is a button. Clicking it runs script.js, which swaps
+   the text and these classes to show each step of writing a review. */
+.review-box {
+  box-sizing: border-box;
+  width: 969px;
+  border: 0;
+  border-radius: 42px;
+  background-color: var(--card-gray);
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  text-align: left;
+  cursor: text;
+}
+
+/* The big box (review) and the small box (name) */
+.review-box-tall {
+  height: 227px;
+  padding: 63px 68px;
+}
+
+.review-box-short {
+  height: 104px;
+  padding: 37px 68px;
+}
+
+/* Gray text is a hint, black text is "typed" text */
+.review-hint {
+  color: var(--gray-text);
+}
+
+.review-typed {
+  color: #000000;
+}
+
+/* ---------- Community comments ---------- */
+
+.comment-list {
+  display: flex;
+  justify-content: center;
+  gap: 75px;
+}
+
+.comment-card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 513px;
+  height: 231px;
+  padding: 52px 46px 38px 46px;
+  border-radius: 42px;
+  background-color: var(--card-gray);
+}
+
+.comment-text {
+  width: 421px;
+  margin: 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: #000000;
+}
+
+.comment-name {
+  margin: 0 14px 0 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  text-align: right;
+  color: var(--gray-text);
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+  padding: 41px 0 45px 0;
+  background-color: var(--tertiary);
+}
+
+.footer-text {
+  margin: 0;
+  font-family: "Marcellus SC", serif;
+  font-size: 30px;
+  line-height: 37px;
+  letter-spacing: 0.3px;
+  text-align: center;
+  color: #000000;
+}
