@@ -353,11 +353,226 @@ body {
   color: var(--gray-text);
 }
 
+/* ---------- About page: title bands ---------- */
+
+/* The dark green bars that hold "ABOUT" and "TEAM" */
+.title-band {
+  height: 136px;
+  margin-top: 12px;
+  background-color: var(--secondary);
+}
+
+.page-title {
+  margin: 0;
+  padding: 23px 53px 0 0;
+  font-family: "Syncopate", sans-serif;
+  font-size: 75px;
+  font-weight: 400;
+  line-height: 90px;
+  letter-spacing: -0.75px;
+  text-align: right;
+  color: var(--tertiary);
+}
+
+/* ---------- About page: film summary ---------- */
+
+/* Like the hero on the Home page, this photo stays 1280px wide */
+.about-photo {
+  display: block;
+  width: 1280px;
+  height: 626px;
+  margin: 12px auto 0 auto;
+  object-fit: cover;
+}
+
+.film-summary {
+  margin-top: 12px;
+  padding: 40px 0 50px 0;
+  background-color: var(--primary);
+}
+
+.film-summary-heading {
+  margin: 0 0 11px 39px;
+  font-family: "Marcellus", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.32px;
+  color: #ffffff;
+}
+
+.film-summary-text {
+  margin: 0 0 0 53px;
+  max-width: 1174px;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: var(--tertiary);
+}
+
+/* ---------- About page: team ---------- */
+
+.team-intro {
+  margin: 41px 0 49px 0;
+  padding-left: 58px;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: #000000;
+}
+
+/* Two team members side by side */
+.team-row {
+  display: flex;
+  justify-content: center;
+  gap: 155px;
+  margin-bottom: 67px;
+}
+
+.team-member {
+  width: 471px;
+}
+
+.photo-box {
+  position: relative;
+  width: 471px;
+  height: 458px;
+  overflow: hidden;
+}
+
+.photo-image {
+  display: block;
+  width: 471px;
+  height: 458px;
+  object-fit: cover;
+}
+
+/* The green cover with contact info. It is hidden until you hover the photo. */
+.photo-overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(76, 112, 70, 0.76);
+}
+
+.photo-box:hover .photo-overlay {
+  display: flex;
+}
+
+.overlay-text {
+  margin: 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  text-align: center;
+  color: var(--tertiary);
+}
+
+/* Name on the left, role on the right */
+.member-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 19px;
+}
+
+.member-name {
+  margin: 0;
+  font-family: "Marcellus", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.32px;
+  color: #000000;
+}
+
+.member-role {
+  margin: 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: #000000;
+}
+
+.member-bio {
+  margin: 27px 0 0 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: #000000;
+}
+
+.member-quote {
+  margin: 30px 0 0 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  text-align: right;
+  color: #000000;
+}
+
+.closing-photo {
+  display: block;
+  width: 1280px;
+  height: 685px;
+  margin: 10px auto 0 auto;
+  object-fit: cover;
+}
+
+/* ---------- Film page ---------- */
+
+/* The light green strip with the sentence under the FILM title */
+.film-intro {
+  margin-top: 0;
+  padding: 39px 0 36px 44px;
+  background-color: var(--tertiary);
+}
+
+.film-intro-text {
+  margin: 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: #000000;
+}
+
+.film-link {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* The dark green box that holds the video.
+   107px + 640px video + 107px = 854px tall, like the Figma design. */
+.video-section {
+  padding: 107px 0;
+  background-color: var(--primary);
+}
+
+.video-player {
+  display: block;
+  width: 1138px;
+  height: 640px;
+  margin: 0 auto;
+  border: 0;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
   padding: 41px 0 45px 0;
   background-color: var(--tertiary);
+}
+
+/* The Film page has a taller footer with extra light green space above the text */
+.film-footer {
+  padding: 252px 0 45px 0;
 }
 
 .footer-text {

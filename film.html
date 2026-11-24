@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Film | Pasta Night</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin&family=Marcellus&family=Marcellus+SC&family=Syncopate&display=swap" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body class="page">
+
+  <header class="site-header">
+    <nav>
+      <ul class="nav-list">
+        <li class="star-item">
+          <button class="star-button" popovertarget="site-menu">
+            <img class="star-image" src="images/star-7.png" alt="Open menu">
+            <img class="star-image-hover" src="images/star-7-hover.png" alt="">
+          </button>
+        </li>
+        <li class="logo-item">
+          <a class="logo-link" href="index.html">
+            <img class="logo-pasta" src="images/object-1.png" alt="pasta">
+            <img class="logo-night" src="images/object-2.png" alt="night">
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="menu-panel" id="site-menu" popover>
+      <button class="menu-star-button" popovertarget="site-menu" popovertargetaction="hide">
+        <img class="menu-star-image" src="images/star-7.png" alt="Close menu">
+      </button>
+      <ul class="menu-list">
+        <li><a class="menu-link" href="about.html">About</a></li>
+        <li><a class="menu-link" href="film.html">Film</a></li>
+        <li><a class="menu-link" href="recipe.html">Recipe</a></li>
+        <li><a class="menu-link" href="concepts.html">Concepts &amp; Stills</a></li>
+        <li><a class="menu-link" href="credits.html">Credits</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="title-band">
+      <div class="page-width">
+        <h1 class="page-title">FILM</h1>
+      </div>
+    </section>
+
+    <section class="film-intro">
+      <p class="film-intro-text">Enjoy the film right here! If the video player doesn’t work for you please click <a class="film-link" href="https://youtu.be/XrqA0YvF70c" target="_blank">here.</a></p>
+    </section>
+
+    <section class="video-section">
+      <iframe class="video-player" src="https://www.youtube.com/embed/XrqA0YvF70c?si=uBaXmu_pGabA4Apm" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+  </main>
+
+  <footer class="site-footer film-footer">
+    <p class="footer-text">MeeksFilms. 2026.</p>
+  </footer>
+
+</body>
+</html>
