@@ -564,6 +564,392 @@ body {
   border: 0;
 }
 
+/* ---------- Recipe page ---------- */
+
+/* The light green strip with the sentence under the RECIPE title */
+.recipe-intro {
+  padding: 39px 0 36px 0;
+  background-color: var(--tertiary);
+}
+
+.recipe-intro-text {
+  margin: 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  text-align: center;
+  color: #000000;
+}
+
+.recipe-link {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+/* The green box with the dish name on the left and the photo on the right.
+   52px + 321px photo + 49px = 422px tall, like the Figma design. */
+.recipe-top {
+  background-color: var(--primary);
+}
+
+.recipe-top-row {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 52px 40px 49px 40px;
+}
+
+.recipe-title {
+  width: 524px;
+  margin: 60px 0 0 0;
+  font-family: "Young Serif", serif;
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 68px;
+  letter-spacing: -2.56px;
+  color: #ffffff;
+}
+
+.recipe-photo {
+  display: block;
+  width: 529px;
+  height: 321px;
+  object-fit: cover;
+}
+
+/* Ingredients and Steps each have a photo at the top with a dark green
+   layer on top of it. The layer covers the whole box, so the part below
+   the photo turns a muted green. Each box is 1280px wide and centered, the
+   same width as its photo, so the dark green never spills past the photo. */
+.ingredients-section {
+  margin-top: 16px;
+}
+
+.ingredients-box {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 318px 0 54px 0;
+  background-color: var(--tertiary);
+  background-image: linear-gradient(rgba(28, 51, 25, 0.61), rgba(28, 51, 25, 0.61)), url("images/image-22.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 100%, 1280px 390px;
+}
+
+.steps-section {
+  margin-top: 17px;
+}
+
+.steps-box {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 320px 0 57px 0;
+  background-color: var(--tertiary);
+  background-image: linear-gradient(rgba(28, 51, 25, 0.61), rgba(28, 51, 25, 0.61)), url("images/image-23.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% 100%, 1280px 392px;
+}
+
+.recipe-heading {
+  margin: 0 0 78px 89px;
+  font-family: "Young Serif", serif;
+  font-size: 30px;
+  font-weight: 400;
+  line-height: 39px;
+  letter-spacing: -1.2px;
+  color: #ffffff;
+}
+
+/* The Steps heading sits a little farther from its list */
+.steps-heading {
+  margin-bottom: 84px;
+}
+
+/* Two bulleted columns side by side */
+.ingredient-columns {
+  display: flex;
+  padding-left: 101px;
+}
+
+.ingredient-list {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 0 0 36px;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: #ffffff;
+}
+
+/* This width starts the second column 445px after the first */
+.ingredient-list-first {
+  width: 445px;
+}
+
+.steps-list {
+  box-sizing: border-box;
+  width: 1072px;
+  margin: 0 0 0 95px;
+  padding: 0 0 0 36px;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: #ffffff;
+}
+
+/* ---------- Concepts page: intro text ---------- */
+
+/* This sentence is centered under the CONCEPTS title */
+.concepts-intro {
+  padding: 37px 0 36px 0;
+  background-color: var(--tertiary);
+}
+
+.concepts-intro-text {
+  margin: 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  text-align: center;
+  color: #000000;
+}
+
+/* ---------- Concepts page: typography title ---------- */
+
+/* The green bar that holds "TYPOGRAPHY". The line height matches the
+   bar's height, which centers the word up and down. */
+.typography-band {
+  height: 137px;
+  background-color: var(--primary);
+}
+
+.typography-title {
+  margin: 0;
+  padding-left: 31px;
+  font-family: "Syncopate", sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  line-height: 137px;
+  letter-spacing: -0.75px;
+  color: var(--tertiary);
+}
+
+/* ---------- Concepts page: card carousel ---------- */
+
+/* 119px + 601px cards + the arrow row = 846px tall, like the Figma design.
+   The 16px margin leaves a light green gap above, like the gap between the
+   Ingredients and Steps boxes on the Recipe page. */
+.carousel-section {
+  margin-top: 16px;
+  padding-top: 119px;
+  background-color: var(--primary);
+}
+
+/* The row of cards scrolls sideways. Each card snaps into place. */
+.carousel-track {
+  display: flex;
+  gap: 40px;
+  padding: 0 72px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 72px;
+}
+
+/* Every card is the same size. Anything that sticks out gets clipped. */
+.concept-card {
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 602px;
+  height: 601px;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+.concept-figure {
+  margin: 0;
+}
+
+.concept-image {
+  display: block;
+  object-fit: cover;
+}
+
+/* One size for each image, named after its layer in Figma */
+.image-8 {
+  width: 598px;
+  height: 462px;
+  margin-top: 6px;
+}
+
+.image-6 {
+  width: 352px;
+  height: 469px;
+}
+
+.image-7 {
+  width: 361px;
+  height: 468px;
+}
+
+/* Two pictures stacked in one card */
+.image-2 {
+  width: 301px;
+  height: 287px;
+}
+
+.image-4 {
+  width: 301px;
+  height: 172px;
+  margin-top: 17px;
+}
+
+/* This photo is tilted. The negative margin pulls it up, and the
+   card clips the part that sticks out the top. */
+.image-3 {
+  width: 563px;
+  height: 540px;
+  margin-top: -13px;
+  transform: rotate(-3.3deg);
+}
+
+.image-5 {
+  width: 568px;
+  height: 468px;
+}
+
+.image-9 {
+  width: 366px;
+  height: 468px;
+}
+
+.image-10 {
+  width: 351px;
+  height: 468px;
+}
+
+.concept-caption {
+  margin: 36px 0 0 0;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 0.24px;
+  color: #ffffff;
+}
+
+/* Card with two stacked pictures: the caption sits a little closer */
+.concept-caption-short {
+  margin-top: 28px;
+}
+
+.concept-caption-tilted {
+  margin: 0 0 0 22px;
+}
+
+/* The two arrows are only a guide that shows people the cards scroll.
+   They are not buttons. The left padding lines the left arrow up
+   at 466px, like the Figma design. */
+.carousel-arrows {
+  display: flex;
+  gap: 59px;
+  padding: 14px 0 90px 466px;
+}
+
+.arrow-image {
+  display: block;
+  height: auto;
+}
+
+.arrow-image-left {
+  width: 138px;
+}
+
+.arrow-image-right {
+  width: 136px;
+}
+
+/* ---------- Concepts page: final typeface ---------- */
+
+.concept-heading {
+  margin: 0;
+  padding: 40px 0 26px 31px;
+  font-family: "Marcellus", serif;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 40px;
+  letter-spacing: 0.32px;
+  color: #000000;
+}
+
+/* The second heading has a little more space above and below */
+.concept-heading-low {
+  padding: 44px 0 27px 31px;
+}
+
+/* Black paragraph text that sits on the green boxes, right aligned */
+.concept-paragraph {
+  width: 480px;
+  margin: 0;
+  font-family: "Marcellus", serif;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.32px;
+  text-align: right;
+  color: #000000;
+}
+
+/* 30px + 361px picture + 34px = 425px tall */
+.final-type-section {
+  background-color: var(--primary);
+}
+
+.final-type-row {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 30px 66px 34px 49px;
+}
+
+.final-type-image {
+  display: block;
+  width: 633px;
+  height: 361px;
+  object-fit: cover;
+}
+
+.final-type-text {
+  margin-top: 40px;
+}
+
+/* 34px + 323px picture + 44px = 401px tall */
+.film-type-section {
+  background-color: var(--primary);
+}
+
+.film-type-row {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  width: 1280px;
+  margin: 0 auto;
+  padding: 34px 39px 44px 56px;
+}
+
+.film-type-text {
+  margin-top: 24px;
+}
+
+.film-type-image {
+  display: block;
+  width: 657px;
+  height: 323px;
+  object-fit: cover;
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
